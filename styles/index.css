@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/*Reseteo de Márgenes*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------- Tipografías --------------------------------------------*/
+
+@font-face {
+    font-family: 'Space Grotesk Regular';
+    src: url('/styles/Fonts/Space_grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('/styles/Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+/*-------------------------------------------- Scroll Suave --------------------------------------------*/
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px; /*Tamaño base de futuros REM*/
+}
+
+/*-------------------------------------------- Root --------------------------------------------*/
+
+:root{
+    /*colores prinicipales*/
+        --color-primario: #e0c2d4;
+        --color-secundario: #2D2E2E;
+        --color-blanco: #F8FAFC;
+
+    /*Tipografías*/
+
+        --fuente-títulos: 'Space Grotesk Regular', sans-serif;
+        --fuente-texto: 'Manrope', sans-serif;
+        --altura-linea-base: 1.5;
+
+
+    /*Tamaños*/
+
+        --tamaño-h1: 3rem;
+        --tamaño-h2: 2rem;
+        --tamaño-h3: 1.5rem;
+        --tamaño-nav: 1.3rem;
+        --tamaño-texto: 1.25rem;
+}
+
+/*-------------------------------------------- Body --------------------------------------------*/
+
+body{
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    font-family: var(--fuente-texto);
+    line-height: var(--altura-linea-base);
+}
+
+body {
+  /* De un tono de púrpura a un tono de gris */
+  background: radial-gradient(circle at center, #bfbdd8 0%, #2D2E2E 100%);
+  background-attachment: fixed;
+}
+
+/*-----------------------------------Decoración básica Hs-------------------------------------------------------------------*/
+h1, h2, h3{
+    font-family: var(--fuente-títulos);
+    color: var(--color-primario);
+}
+
+/*-------------------------------------------- Header --------------------------------------------*/
+
+#contenedor_header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('/styles/IMG/nasa-xFO2Xt33xgI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: var(--tamaño-h1);
+    margin-left: 6rem;
+}
+.highlight {
+    color: #4e89b6
+}
+/*-------------------------------------------- Nav --------------------------------------------*/
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo sutil para legibilidad */
+}
+
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 5vw, 3rem); 
+    padding: 0.5rem;
+}
+
+nav ul li a{
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: var(--tamaño-nav);
+    padding: 0.8rem;
+    border-radius: 25%;
+    transition: background-color 0.7s ease;
+}
+
+nav ul li a:hover{
+    background-color: var(--color-primario);
+}
