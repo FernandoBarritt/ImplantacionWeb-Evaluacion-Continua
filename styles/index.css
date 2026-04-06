@@ -154,7 +154,7 @@ nav {
     top: 0;
     z-index: 2000;
     padding: 1.5rem;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.3);
 }
