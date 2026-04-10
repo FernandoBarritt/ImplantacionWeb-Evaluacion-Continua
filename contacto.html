@@ -21,17 +21,18 @@
 
         <div class="Contenedor-texto">
             <p><span>¿Tienes alguna pregunta? </span><br> Contacta con el centro de comandos de <span>Nova.</span><br> (Atención al cliente)</p>
-            <form action="Contacto">
+            <form id="formContacto">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
                 <br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
                 <br>
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea>
                 <br>
                 <button type="submit">Enviar</button>
+                <div id="mensaje-estado"></div>
             </form>
         </div>
 
@@ -39,8 +40,8 @@
             <img src="styles/IMG/Nova_Contact2.png" alt="Imagen de chica al teléfono en la tienda de Nova">
         </div>
 
-
-        
     </div>
+
+    <script src="/scripts/script.js" defer></script>
 </body>
 </html>

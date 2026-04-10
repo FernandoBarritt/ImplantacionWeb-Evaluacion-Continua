@@ -180,4 +180,22 @@ form button {
 }
 
 
+#mensaje-estado {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.error {
+    display: block !important;
+    background-color: #ef4444; /* Rojo */
+    color: white;
+}
+
+.exito {
+    display: block !important;
+    background-color: #10b981; /* Verde */
+    color: white;
+}
 
